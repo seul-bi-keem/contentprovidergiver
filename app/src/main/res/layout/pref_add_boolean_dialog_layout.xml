@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/key_textview"
+        app:layout_constraintTop_toTopOf="@id/key_edittext"
+        app:layout_constraintBottom_toBottomOf="@id/key_edittext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/key_edittext"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="key : " />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/key_edittext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/key_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:hint="SharedPreference의 key" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/value_textview"
+        app:layout_constraintTop_toTopOf="@id/value_spinner"
+        app:layout_constraintBottom_toBottomOf="@id/value_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/key_edittext"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="value : " />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/value_spinner"
+        app:layout_constraintTop_toBottomOf="@id/key_edittext"
+        app:layout_constraintStart_toEndOf="@id/value_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:hint="SharedPreference의 value를 입력하세요." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
